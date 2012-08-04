@@ -215,27 +215,27 @@ class connect(object):
         
         banner = ' '
        
-        #try:
-        print 'Opening connection to %s:%s' %(target, port)
-        error = 'Connection'
+        try:
+            print 'Opening connection to %s:%s' %(target, port)
+            error = 'Connection'
                         
-        if len(un) < 1:
-            un = 'un'
+            if len(un) < 1:
+                un = 'un'
                 
-        if len(pw) < 1:
-            pw = 'pw'
+            if len(pw) < 1:
+                pw = 'pw'
                 
-        print 'smbclient //'+target+'/share "" -N'
-        print 'Banner: '                
-        p = subprocess.Popen('smbclient //'+target+'/share "" -N', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)            
+                print 'smbclient //'+target+'/share "" -N'
+                print 'Banner: '                
+                p = subprocess.Popen('smbclient //'+target+'/share "" -N', shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)            
         
-        for banner in p.stdout.readlines():
-            print banner,
+            for banner in p.stdout.readlines():
+                print banner,
             
-        retval = p.wait()
-        return retval  
+            retval = p.wait()
+            return retval  
     
-        #except:
-         #   print 'Unable to complete operation: %s' %error
-          #  return -1                  
+        except:
+            print 'Unable to complete operation: %s' %error
+            return -1                  
     
