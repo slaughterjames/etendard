@@ -1,0 +1,6 @@
+[KEY] User-Agent
+[DATA] Mozilla/7.0 (X11; U; Linux i686; en-US; rv:1.8.1.14)
+[KEY] Connection
+[DATA] open
+[KEY] Set-Cookie
+[DATA] CG=CA:ON:Kitchener; path=/
